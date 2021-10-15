@@ -31,7 +31,7 @@ def connect_to_spotify():
     code = request.args["code"]
     auth_manager.get_access_token(code)
     if settings.PRODUCTION:
-        return redirect(url_for('/'))
+        return redirect(url_for('index'))
     return redirect("http://localhost:3000/")
 
 
